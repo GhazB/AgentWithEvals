@@ -75,7 +75,7 @@ class ChatbotAgent():
         Messages: {messages}
         """
         llm_messages = create_llm_msg(SMALLTALK_PROMPT, state.messages)
-        return {"response": self.model.stream(llm_messages), "caegory": "Smalltalk"}
+        return {"response": self.model.stream(llm_messages), "category": "smalltalk_agent"}
     
     def complaint_agent(self, state: AgentState):
         print("Complaint agent")
@@ -86,7 +86,7 @@ class ChatbotAgent():
         Messages: {messages}
         """
         llm_messages = create_llm_msg(COMPLAINT_PROMPT, state.messages)
-        return {"response": self.model.stream(llm_messages), "category": "Complaint"}   
+        return {"response": self.model.stream(llm_messages), "category": "complaint_agent"}   
     
     def status_agent(self, state: AgentState):
         print("Status agent")
@@ -97,7 +97,7 @@ class ChatbotAgent():
         Messages: {messages}
         """
         llm_messages = create_llm_msg(STATUS_PROMPT, state.messages)
-        return {"response": self.model.stream(llm_messages), "category": "Status"}
+        return {"response": self.model.stream(llm_messages), "category": "status_agent"}
     
     def feedback_agent(self, state: AgentState):
         print("Feedback agent")
@@ -108,5 +108,5 @@ class ChatbotAgent():
         Messages: {messages}
         """
         llm_messages = create_llm_msg(FEEDBACK_PROMPT, state.messages)
-        return {"response": self.model.stream(llm_messages), "category": "Feedback"}    
+        return {"response": self.model.stream(llm_messages), "category": "feedback_agent"}    
         
