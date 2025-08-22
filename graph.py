@@ -40,6 +40,10 @@ class ChatbotAgent():
         workflow.add_edge("feedback_agent", END)
 
         self.graph = workflow.compile()
+        graph_bytes=self.graph.get_graph().draw_png()
+        with open("graph2.png", "wb") as f:
+            f.write(graph_bytes)
+
 
 
     def classifier(self, state: AgentState):
