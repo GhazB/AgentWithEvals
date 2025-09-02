@@ -1,3 +1,7 @@
+# for windows:
+#   1. download visual c++ build tools
+#   2. download grpahviz installer
+#   3. run python -m pip install --config-settings="--global-option=build_ext" --config-settings="--global-option=-IC:\Program Files\Graphviz\include" --config-settings="--global-option=-LC:\Program Files\Graphviz\lib" pygraphviz
 streamlit
 langchain
 langchain-community
